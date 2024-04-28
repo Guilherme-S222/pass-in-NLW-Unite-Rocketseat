@@ -1,0 +1,34 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title": 123,
+    "details": null,
+    "maximumAttendees": 1
+}
+
+###
+
+POST http://localhost:3333/events/4734ccf9-2328-4801-8a0f-98f084745977/attendees
+Content-Type: application/json
+
+{
+    "name": "Guilherme Anjolette",
+    "email": "guilhermeeee@gmail.com.br"
+}
+
+###
+
+GET http://localhost:3333/events/4734ccf9-2328-4801-8a0f-98f084745977
+
+###
+
+GET http://localhost:3333/attendees/5/badge
+
+###
+
+GET http://localhost:3333/attendees/5/check-in
+
+###
+
+GET http://localhost:3333/events/4734ccf9-2328-4801-8a0f-98f084745977/attendees?query=Guilherme
